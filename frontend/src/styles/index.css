@@ -4,7 +4,7 @@
  */
 
 /* Design Tokens (must be first) */
-@import './ui/tokens/tokens.css';
+@import '../ui/tokens/tokens.css';
 
 /* Base Styles & Reset */
-@import './ui/tokens/base.css';
+@import '../ui/tokens/base.css';

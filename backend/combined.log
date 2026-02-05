@@ -96,3 +96,5 @@
 {"level":"info","message":"GET /api/certificates/my/TESTWALLET123","service":"ccms-backend","timestamp":"2026-02-05T19:14:50.921Z"}
 {"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-05T19:20:20.053Z"}
 {"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-05T19:20:20.114Z"}
+{"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-05T19:40:33.104Z"}
+{"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-05T19:40:33.757Z"}
