@@ -1,0 +1,143 @@
+/* Card Component Styles */
+
+.card {
+    background-color: var(--surface-base);
+    border-radius: var(--card-radius);
+    transition:
+        box-shadow var(--transition-normal),
+        transform var(--transition-normal),
+        border-color var(--transition-fast);
+}
+
+/* ========================================
+ * VARIANTS
+ * ======================================== */
+
+.card--elevated {
+    box-shadow: var(--card-shadow);
+}
+
+.card--outlined {
+    border: 1px solid var(--border-default);
+    box-shadow: none;
+}
+
+.card--filled {
+    background-color: var(--bg-secondary);
+    box-shadow: none;
+}
+
+/* ========================================
+ * PADDING SCALE
+ * ======================================== */
+
+.card--padding-0 {
+    padding: 0;
+}
+
+.card--padding-3 {
+    padding: var(--space-3);
+}
+
+.card--padding-4 {
+    padding: var(--space-4);
+}
+
+.card--padding-5 {
+    padding: var(--space-5);
+}
+
+.card--padding-6 {
+    padding: var(--space-6);
+}
+
+.card--padding-7 {
+    padding: var(--space-7);
+}
+
+.card--padding-8 {
+    padding: var(--space-8);
+}
+
+/* ========================================
+ * INTERACTIVE STATE
+ * ======================================== */
+
+.card--interactive {
+    cursor: pointer;
+}
+
+.card--interactive:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.card--interactive:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+.card--interactive:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-focus), var(--shadow-md);
+}
+
+/* Selected State */
+.card--selected {
+    border: 2px solid var(--color-primary-500);
+    background-color: var(--bg-subtle);
+}
+
+.card--selected.card--outlined {
+    border-color: var(--color-primary-500);
+}
+
+/* ========================================
+ * CARD SECTIONS
+ * ======================================== */
+
+.card__header {
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--border-default);
+    margin-bottom: var(--space-4);
+}
+
+.card__body {
+    flex: 1;
+}
+
+.card__footer {
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--border-default);
+    margin-top: var(--space-4);
+    display: flex;
+    gap: var(--space-3);
+    justify-content: flex-end;
+}
+
+/* Remove borders when card has no padding */
+.card--padding-0 .card__header {
+    padding: var(--space-4) var(--space-5);
+    margin-bottom: 0;
+}
+
+.card--padding-0 .card__body {
+    padding: var(--space-5);
+}
+
+.card--padding-0 .card__footer {
+    padding: var(--space-4) var(--space-5);
+    margin-top: 0;
+}
+
+/* ========================================
+ * DARK MODE
+ * ======================================== */
+
+[data-theme="dark"] .card--elevated {
+    box-shadow: var(--shadow-lg);
+}
+
+[data-theme="dark"] .card--interactive:hover {
+    box-shadow: var(--shadow-xl);
+}

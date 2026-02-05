@@ -1,0 +1,212 @@
+/* Attendance Page Styles */
+
+.attendance__layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: var(--space-5);
+}
+
+/* ========================================
+ * MAIN CARD
+ * ======================================== */
+
+.attendance__main {
+    min-height: 400px;
+}
+
+.attendance__event-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, var(--color-primary-100), var(--color-accent-100));
+    border-radius: var(--radius-lg);
+    color: var(--color-primary-600);
+}
+
+[data-theme="dark"] .attendance__event-icon {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(20, 184, 166, 0.2));
+    color: var(--color-primary-400);
+}
+
+.attendance__event-id {
+    font-family: var(--font-family-mono);
+}
+
+/* ========================================
+ * STATUS DISPLAY
+ * ======================================== */
+
+.attendance__status {
+    padding: var(--space-8);
+    text-align: center;
+}
+
+.attendance__status-success,
+.attendance__status-pending {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.attendance__status-success {
+    animation: attendance-success 0.5s ease-out;
+}
+
+@keyframes attendance-success {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ========================================
+ * RESULT CARD
+ * ======================================== */
+
+.attendance__result {
+    background-color: var(--bg-subtle);
+}
+
+.attendance__result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.attendance__explorer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--text-brand);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    margin-top: var(--space-2);
+}
+
+.attendance__explorer-link:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+ * ACTIVITY LOG
+ * ======================================== */
+
+.attendance__log {
+    height: fit-content;
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-5));
+}
+
+.attendance__log-entries {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.attendance__log-entry {
+    display: flex;
+    gap: var(--space-3);
+    font-size: var(--font-size-xs);
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+    animation: log-slide-in 0.3s ease-out;
+}
+
+@keyframes log-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.attendance__log-time {
+    color: var(--text-tertiary);
+    flex-shrink: 0;
+    font-family: var(--font-family-mono);
+}
+
+.attendance__log-message {
+    color: var(--text-secondary);
+    word-break: break-word;
+}
+
+.attendance__log-entry--success {
+    background-color: var(--color-success-50);
+}
+
+.attendance__log-entry--success .attendance__log-message {
+    color: var(--color-success-700);
+}
+
+.attendance__log-entry--error {
+    background-color: var(--color-error-50);
+}
+
+.attendance__log-entry--error .attendance__log-message {
+    color: var(--color-error-700);
+}
+
+[data-theme="dark"] .attendance__log-entry--success {
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+[data-theme="dark"] .attendance__log-entry--success .attendance__log-message {
+    color: var(--color-success-400);
+}
+
+[data-theme="dark"] .attendance__log-entry--error {
+    background-color: rgba(244, 63, 94, 0.1);
+}
+
+[data-theme="dark"] .attendance__log-entry--error .attendance__log-message {
+    color: var(--color-error-400);
+}
+
+/* ========================================
+ * EMPTY STATE
+ * ======================================== */
+
+.attendance__empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, var(--color-primary-100), var(--color-accent-100));
+    border-radius: var(--radius-xl);
+    color: var(--color-primary-600);
+}
+
+/* ========================================
+ * RESPONSIVE
+ * ======================================== */
+
+@media (max-width: 1024px) {
+    .attendance__layout {
+        grid-template-columns: 1fr;
+    }
+
+    .attendance__log {
+        position: static;
+    }
+}

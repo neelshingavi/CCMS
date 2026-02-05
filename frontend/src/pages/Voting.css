@@ -1,0 +1,47 @@
+/* Voting Page Styles */
+
+.coming-soon {
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.coming-soon__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    background: linear-gradient(135deg, var(--color-primary-100), var(--color-accent-100));
+    border-radius: var(--radius-xl);
+    color: var(--color-primary-600);
+    margin-bottom: var(--space-4);
+}
+
+[data-theme="dark"] .coming-soon__icon {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(20, 184, 166, 0.2));
+    color: var(--color-primary-400);
+}
+
+.coming-soon__text {
+    max-width: 32rem;
+}
+
+.coming-soon__features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    justify-content: center;
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--border-default);
+    width: 100%;
+}
+
+.coming-soon__feature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-full);
+}
