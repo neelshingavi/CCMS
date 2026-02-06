@@ -4,8 +4,8 @@ const Event = require('../models/Event');
 const { authenticate, authorize } = require('../middlewares/auth.middleware');
 const logger = require('../config/logger');
 
-// Get all events - PUBLIC (no auth required for listing)
-router.get('/', async (req, res) => {
+// Get all events - PROTECTED
+router.get('/', authenticate, async (req, res) => {
     try {
         const events = await Event.findAll({
             order: [['startTime', 'DESC']]
@@ -17,8 +17,8 @@ router.get('/', async (req, res) => {
     }
 });
 
-// Get single event - PUBLIC
-router.get('/:eventId', async (req, res) => {
+// Get single event - PROTECTED
+router.get('/:eventId', authenticate, async (req, res) => {
     try {
         const event = await Event.findOne({ where: { eventId: req.params.eventId } });
         if (!event) {

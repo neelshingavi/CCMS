@@ -98,3 +98,41 @@
 {"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-05T19:20:20.114Z"}
 {"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-05T19:40:33.104Z"}
 {"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-05T19:40:33.757Z"}
+{"level":"info","message":"🚀 Server running on port 5001","service":"ccms-backend","timestamp":"2026-02-06T09:07:47.955Z"}
+{"level":"info","message":"GET /","service":"ccms-backend","timestamp":"2026-02-06T09:21:05.168Z"}
+{"level":"info","message":"🚀 Server running on port 5001","service":"ccms-backend","timestamp":"2026-02-06T09:29:26.475Z"}
+{"level":"info","message":"🚀 Server running on port 5001","service":"ccms-backend","timestamp":"2026-02-06T09:31:56.724Z"}
+{"level":"info","message":"🚀 Server running on port 5001","service":"ccms-backend","timestamp":"2026-02-06T09:32:18.183Z"}
+{"level":"info","message":"GET /health","service":"ccms-backend","timestamp":"2026-02-06T09:32:23.448Z"}
+{"level":"info","message":"POST /api/auth/register","service":"ccms-backend","timestamp":"2026-02-06T09:32:23.522Z"}
+{"level":"error","service":"ccms-backend","timestamp":"2026-02-06T09:32:23.533Z"}
+{"level":"info","message":"POST /api/auth/register","service":"ccms-backend","timestamp":"2026-02-06T09:32:23.538Z"}
+{"errors":[{"instance":{"createdAt":"2026-02-06T09:32:23.634Z","email":"not-an-email","id":"d1b2ae86-0e85-4375-a148-4b5ef20c06e6","name":"Test User","password_hash":"$2b$10$WeQGCc2lzJg8rGVyJF54z.4qKmTK.35JX4pXeqgusDxaNvCm6R99e","role":"STUDENT","updatedAt":"2026-02-06T09:32:23.634Z"},"message":"Validation isEmail on email failed","origin":"FUNCTION","original":{"validatorArgs":[{"allow_display_name":false,"allow_underscores":false,"allow_utf8_local_part":true,"blacklisted_chars":"","host_blacklist":[],"host_whitelist":[],"ignore_max_length":false,"require_display_name":false,"require_tld":true}],"validatorName":"isEmail"},"path":"email","type":"Validation error","validatorArgs":[{"allow_display_name":false,"allow_underscores":false,"allow_utf8_local_part":true,"blacklisted_chars":"","host_blacklist":[],"host_whitelist":[],"ignore_max_length":false,"require_display_name":false,"require_tld":true}],"validatorKey":"isEmail","validatorName":"isEmail","value":"not-an-email"}],"level":"error","name":"SequelizeValidationError","service":"ccms-backend","timestamp":"2026-02-06T09:32:23.635Z"}
+{"level":"info","message":"POST /api/auth/login","service":"ccms-backend","timestamp":"2026-02-06T09:32:23.638Z"}
+{"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-06T09:32:23.642Z"}
+{"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-06T09:32:23.648Z"}
+{"level":"info","message":"POST /api/attendance/mark","service":"ccms-backend","timestamp":"2026-02-06T09:32:23.651Z"}
+{"level":"info","message":"POST /api/voting/create","service":"ccms-backend","timestamp":"2026-02-06T09:32:23.654Z"}
+{"level":"info","message":"GET /api/certificates/verify/nonexistenthash1234567890123456789012345678901234567890123456","service":"ccms-backend","timestamp":"2026-02-06T09:32:23.656Z"}
+{"level":"info","message":"POST /api/feedback/submit","service":"ccms-backend","timestamp":"2026-02-06T09:32:23.661Z"}
+{"level":"info","message":"🚀 Server running on port 5001","service":"ccms-backend","timestamp":"2026-02-06T09:33:56.398Z"}
+{"level":"info","message":"🚀 Server running on port 5001","service":"ccms-backend","timestamp":"2026-02-06T09:33:57.826Z"}
+{"level":"info","message":"🚀 Server running on port 5001","service":"ccms-backend","timestamp":"2026-02-06T09:33:59.712Z"}
+{"level":"info","message":"🚀 Server running on port 5001","service":"ccms-backend","timestamp":"2026-02-06T09:34:01.812Z"}
+{"level":"info","message":"🚀 Server running on port 5001","service":"ccms-backend","timestamp":"2026-02-06T09:34:03.748Z"}
+{"level":"info","message":"GET /health","service":"ccms-backend","timestamp":"2026-02-06T09:34:47.689Z"}
+{"level":"info","message":"POST /api/auth/register","service":"ccms-backend","timestamp":"2026-02-06T09:34:47.759Z"}
+{"level":"info","message":"POST /api/auth/register","service":"ccms-backend","timestamp":"2026-02-06T09:34:47.762Z"}
+{"level":"info","message":"POST /api/auth/login","service":"ccms-backend","timestamp":"2026-02-06T09:34:47.764Z"}
+{"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-06T09:34:47.773Z"}
+{"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-06T09:34:47.775Z"}
+{"level":"info","message":"POST /api/attendance/mark","service":"ccms-backend","timestamp":"2026-02-06T09:34:47.777Z"}
+{"level":"info","message":"POST /api/voting/create","service":"ccms-backend","timestamp":"2026-02-06T09:34:47.780Z"}
+{"level":"info","message":"GET /api/certificates/verify/nonexistenthash1234567890123456789012345678901234567890123456","service":"ccms-backend","timestamp":"2026-02-06T09:34:47.782Z"}
+{"level":"info","message":"POST /api/feedback/submit","service":"ccms-backend","timestamp":"2026-02-06T09:34:47.786Z"}
+{"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-06T09:38:35.122Z"}
+{"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-06T09:38:35.134Z"}
+{"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-06T09:39:13.968Z"}
+{"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-06T09:39:13.981Z"}
+{"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-06T09:39:20.015Z"}
+{"level":"info","message":"GET /api/events","service":"ccms-backend","timestamp":"2026-02-06T09:39:20.019Z"}

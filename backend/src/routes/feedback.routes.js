@@ -4,7 +4,10 @@ const feedbackController = require('../controllers/feedback.controller');
 const { authenticate, authorize } = require('../middlewares/auth.middleware');
 
 // Demo Mode - wallet-based feedback (no JWT required)
-router.post('/submit', feedbackController.submitFeedback);
+// router.post('/submit', feedbackController.submitFeedback);
+
+// Secure Feedback Submission
+router.post('/submit', authenticate, feedbackController.submitFeedback);
 
 // Admin endpoints - require authentication
 router.get('/analytics/:eventId', authenticate, authorize(['ADMIN', 'FACULTY', 'SUPER_ADMIN']), feedbackController.getFeedbackAnalytics);

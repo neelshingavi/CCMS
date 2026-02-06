@@ -4,10 +4,10 @@ const attendanceController = require('../controllers/attendance.controller');
 const { authenticate, authorize } = require('../middlewares/auth.middleware');
 
 // Demo Mode - wallet-based (no JWT required)
-router.post('/mark', attendanceController.markAttendanceDemo);
+router.post('/mark/demo', attendanceController.markAttendanceDemo);
 
 // Authenticated endpoints (for production)
-router.post('/mark/auth', authenticate, attendanceController.markAttendance);
+router.post('/mark', authenticate, attendanceController.markAttendance);
 router.get('/my', authenticate, attendanceController.getMyAttendance);
 
 // Admin/Faculty endpoints

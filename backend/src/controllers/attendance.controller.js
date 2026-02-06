@@ -129,7 +129,7 @@ exports.markAttendanceDemo = async (req, res) => {
         // 5. Create attendance record (using wallet hash as pseudo-user-id)
         const attendance = await Attendance.create({
             event_id: event.id,
-            user_id: walletHash.substring(0, 36), // Use first 36 chars of hash as UUID substitute
+            user_id: require('uuid').v4(), // Generate valid UUID
             wallet_address: walletAddress,
             wallet_hash: walletHash,
             status: 'CONFIRMED',
