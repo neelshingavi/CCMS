@@ -1,0 +1,148 @@
+/* Sidebar Component Styles */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: var(--space-5);
+}
+
+/* ========================================
+ * SECTIONS
+ * ======================================== */
+
+.sidebar__section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.sidebar__section-title {
+    padding: 0 var(--space-3);
+    margin-bottom: var(--space-2);
+    text-transform: uppercase;
+}
+
+/* ========================================
+ * NAVIGATION
+ * ======================================== */
+
+.sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.sidebar__link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.sidebar__link:hover {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.sidebar__link:active {
+    transform: scale(0.98);
+}
+
+.sidebar__link--active {
+    background-color: var(--bg-subtle);
+    color: var(--text-brand);
+}
+
+.sidebar__link--active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 1.5rem;
+    background-color: var(--color-primary-500);
+    border-radius: 0 var(--radius-full) var(--radius-full) 0;
+}
+
+.sidebar__link {
+    position: relative;
+}
+
+.sidebar__link-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ========================================
+ * FOOTER
+ * ======================================== */
+
+.sidebar__footer {
+    margin-top: auto;
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--border-default);
+}
+
+.sidebar__network {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3);
+}
+
+.sidebar__network-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-success-500);
+    border-radius: var(--radius-full);
+    animation: network-pulse 2s ease-in-out infinite;
+}
+
+@keyframes network-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+    }
+
+    50% {
+        opacity: 0.8;
+        box-shadow: 0 0 0 4px rgba(16, 185, 129, 0);
+    }
+}
+
+/* ========================================
+ * COLLAPSED STATE
+ * ======================================== */
+
+.app-shell--with-sidebar:not(.app-shell--sidebar-open) .sidebar__link-text,
+.app-shell--with-sidebar:not(.app-shell--sidebar-open) .sidebar__section-title,
+.app-shell--with-sidebar:not(.app-shell--sidebar-open) .sidebar__network span {
+    display: none;
+}
+
+.app-shell--with-sidebar:not(.app-shell--sidebar-open) .sidebar__link {
+    justify-content: center;
+    padding: var(--space-3);
+}
+
+/* ========================================
+ * DARK MODE
+ * ======================================== */
+
+[data-theme="dark"] .sidebar__link--active {
+    background-color: rgba(99, 102, 241, 0.15);
+}

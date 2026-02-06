@@ -1,0 +1,127 @@
+/* PageContainer & Section Styles */
+
+/* ========================================
+ * PAGE CONTAINER
+ * ======================================== */
+
+.page-container {
+    width: 100%;
+    padding: var(--space-6);
+    margin: 0 auto;
+}
+
+/* Max Width Variants */
+.page-container--sm {
+    max-width: 36rem;
+}
+
+.page-container--md {
+    max-width: 48rem;
+}
+
+.page-container--lg {
+    max-width: 64rem;
+}
+
+.page-container--xl {
+    max-width: 80rem;
+}
+
+.page-container--full {
+    max-width: 100%;
+}
+
+/* Page Header */
+.page-container__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-5);
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-5);
+    border-bottom: 1px solid var(--border-default);
+}
+
+.page-container__title-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.page-container__actions {
+    display: flex;
+    gap: var(--space-3);
+    flex-shrink: 0;
+}
+
+/* Page Content */
+.page-container__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-7);
+}
+
+/* ========================================
+ * SECTION
+ * ======================================== */
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.section__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+}
+
+.section__title-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.section__actions {
+    display: flex;
+    gap: var(--space-2);
+    flex-shrink: 0;
+}
+
+.section__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+/* ========================================
+ * RESPONSIVE
+ * ======================================== */
+
+@media (max-width: 768px) {
+    .page-container {
+        padding: var(--space-4);
+    }
+
+    .page-container__header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .page-container__actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 640px) {
+    .page-container {
+        padding: var(--space-3);
+    }
+
+    .section__header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

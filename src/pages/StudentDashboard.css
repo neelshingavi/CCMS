@@ -1,0 +1,120 @@
+/* Student Dashboard Styles */
+
+.student-dashboard__empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: var(--space-5);
+}
+
+.student-dashboard__connect-card {
+    max-width: 24rem;
+}
+
+.student-dashboard__empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, var(--color-primary-100), var(--color-accent-100));
+    border-radius: var(--radius-xl);
+    color: var(--color-primary-600);
+}
+
+[data-theme="dark"] .student-dashboard__empty-icon {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(20, 184, 166, 0.2));
+    color: var(--color-primary-400);
+}
+
+/* ========================================
+ * STATS
+ * ======================================== */
+
+.student-dashboard__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-4);
+}
+
+.stat-card .card__body {
+    padding: var(--space-5);
+}
+
+.stat-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--radius-lg);
+}
+
+.stat-card__icon--primary {
+    background-color: var(--color-primary-100);
+    color: var(--color-primary-600);
+}
+
+.stat-card__icon--accent {
+    background-color: var(--color-accent-100);
+    color: var(--color-accent-600);
+}
+
+[data-theme="dark"] .stat-card__icon--primary {
+    background-color: rgba(99, 102, 241, 0.2);
+    color: var(--color-primary-400);
+}
+
+[data-theme="dark"] .stat-card__icon--accent {
+    background-color: rgba(20, 184, 166, 0.2);
+    color: var(--color-accent-400);
+}
+
+.wallet-display {
+    font-size: var(--font-size-lg);
+    color: var(--text-primary);
+}
+
+/* ========================================
+ * EVENTS GRID
+ * ======================================== */
+
+.student-dashboard__events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-5);
+}
+
+/* ========================================
+ * EMPTY STATE
+ * ======================================== */
+
+.empty-state {
+    border-style: dashed;
+}
+
+.empty-state__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius-full);
+    color: var(--text-tertiary);
+}
+
+/* ========================================
+ * RESPONSIVE
+ * ======================================== */
+
+@media (max-width: 768px) {
+    .student-dashboard__stats {
+        grid-template-columns: 1fr;
+    }
+
+    .student-dashboard__events-grid {
+        grid-template-columns: 1fr;
+    }
+}
