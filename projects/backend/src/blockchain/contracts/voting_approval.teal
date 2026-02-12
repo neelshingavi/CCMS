@@ -1,0 +1,104 @@
+#pragma version 8
+txn ApplicationID
+int 0
+==
+bnz main_l14
+txn OnCompletion
+int OptIn
+==
+bnz main_l13
+txn OnCompletion
+int CloseOut
+==
+bnz main_l12
+txn OnCompletion
+int UpdateApplication
+==
+bnz main_l11
+txn OnCompletion
+int DeleteApplication
+==
+bnz main_l10
+txn OnCompletion
+int NoOp
+==
+bnz main_l7
+err
+main_l7:
+txna ApplicationArgs 0
+byte "VOTE"
+==
+bnz main_l9
+err
+main_l9:
+global LatestTimestamp
+byte "start_time"
+app_global_get
+>=
+assert
+global LatestTimestamp
+byte "end_time"
+app_global_get
+<=
+assert
+int 0
+byte "has_voted"
+app_local_get
+int 0
+==
+assert
+int 0
+byte "vote_commitment"
+txna ApplicationArgs 1
+app_local_put
+int 0
+byte "has_voted"
+int 1
+app_local_put
+int 1
+return
+main_l10:
+txn Sender
+byte "creator"
+app_global_get
+==
+global LatestTimestamp
+byte "end_time"
+app_global_get
+>
+&&
+return
+main_l11:
+int 0
+return
+main_l12:
+int 1
+return
+main_l13:
+int 0
+byte "has_voted"
+int 0
+app_local_put
+int 1
+return
+main_l14:
+byte "creator"
+txn Sender
+app_global_put
+byte "election_id"
+txna ApplicationArgs 0
+app_global_put
+byte "start_time"
+txna ApplicationArgs 1
+btoi
+app_global_put
+byte "end_time"
+txna ApplicationArgs 2
+btoi
+app_global_put
+byte "option_count"
+txna ApplicationArgs 3
+btoi
+app_global_put
+int 1
+return
