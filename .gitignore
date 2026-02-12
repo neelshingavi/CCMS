@@ -3,8 +3,8 @@ node_modules/
 .venv/
 
 # Environment files (contain secrets)
-#.env
-#*.env.local
+.env
+*.env.local
 
 # Build output
 dist/
